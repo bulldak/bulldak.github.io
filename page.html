@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+      
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /*사이트제목*/
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #1F374F;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 50px;
+        }
+        
+        /*top navigation bar */  
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+         .topnav a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+        
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+        
+        .noimage {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .post {
+            background-color: #E0DFDB;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .below {
+            padding: 10px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>J의 지식창고</h1>
+        <p>사이트 요약 설명 글</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#">menu1</a>
+        <a href="#">menu2</a>
+        <a href="#">menu3</a>
+        <a href="#" style="float: left;">Home</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="post">
+                <h2>포스트 제목</h2>
+                <h5>작성 시간 or 소제목</h5>
+                <div class="noimage" style="height:200px;">미리보기 이미지</div>
+                <p>글 내용</p>
+            </div>
+            <div class="post">
+                <h2>포스트 제목</h2>
+                <h5>작성 시간 or 소제목</h5>
+                <div class="noimage" style="height:200px;">미리보기 이미지</div>
+                <p>글 내용</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="post">
+                <h2>Search</h2>
+                <p>검색바 만들기</p>
+            </div>
+            <div class="post">
+                <h3>Categories</h3>
+                <CENTER>
+                    <a href="#">Category1</a><p>
+                    <a href="#">Category2</a><p>
+                    <a href="#">Category3</a>
+                </CENTER>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="below">
+        <h2>정보</h2>
+    </div>
+
+</body>
+
+</html>
