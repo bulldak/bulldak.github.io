@@ -1,153 +1,272 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-      
-        body {
-            font-family: Arial;
-            padding: 10px;
-            background: #f1f1f1;
-        }
+    <head>
+        <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        .header {
-            padding: 30px;
-            text-align: center;
-            background: #1F374F;
-            color: white;
-        }
-        
-        .header h1 {
-            font-size: 50px;
-        }
-        
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
+            a {
+                color: #007bff;
+                text-decoration: none;
+                background-color: transparent;
+            }
+            
+            a:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+            
+            body {
+                font-family: Arial;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 20px;
+                background: #fff;
+            }
 
-         .topnav a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
-        
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            background-color: #f1f1f1;
-            padding-left: 20px;
-        }
-        
-        .noimage {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-        
-        .post {
-            background-color: #E0DFDB;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        .below {
-            padding: 10px;
-            text-align: center;
-            background: #ddd;
-            margin-top: 20px;
-        }
-        
-        @media screen and (max-width: 800px) {
-            .leftcolumn,
+            .header {
+                padding: 30px;
+                text-align: center;
+                background: #1F374F;
+                color: white;
+            }
+
+            .header h1 {
+                font-size: 50px;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+             .topnav a {
+                float: right;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .leftcolumn {
+                float: left;
+                width: 75%;
+            }
+
             .rightcolumn {
+                float: left;
+                width: 25%;
+                background-color: #fff;
+                padding-left: 20px;
+            }
+
+            .noimage {
+                background-color: #aaa;
                 width: 100%;
-                padding: 0;
+                padding: 20px;
+            }
+
+            .post {
+                background-color: #fff;
+                padding: 20px;
+                margin-top: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                border-radius: 5px;
+            }
+            .post-title {
+                margin-top: 0px;
+            }
+            .post-footer {
+                padding: 0.75rem 1.25rem;
+                margin-bottom: -20px;
+                margin-left: -20px;
+                margin-right: -20px;
+                background-color: rgba(0, 0, 0, 0.03);
+                border-top: 1px solid rgba(0, 0, 0, 0.125);
+            }
+            
+            .sidebar {
+                background-color: #fff;
+                padding: 20px;
+                margin-top: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                border-radius: 5px;
+            }
+            
+            .sidebar-title {
+                padding: 0.75rem 1.25rem;
+                margin-top: -20px;
+                margin-left: -20px;
+                margin-right: -20px;
+                background-color: rgba(0, 0, 0, 0.03);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            }
+            
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .below {
+                padding: 10px;
+                margin-bottom: -20px;
+                text-align: center;
+                background: #ddd;
+                margin-top: 20px;
+            }
+
+            @media screen and (max-width: 920px) {
+                .leftcolumn,
+                .rightcolumn {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            @media screen and (max-width: 400px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                }
+            }
+            
+            .button {
+                border-radius: 4px;
+                background-color: #008CBA;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 18px;
+                padding: 10px;
+                width: 150px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+            
+            .google{
+                padding: 40px;
+                margin-top: 20px;
+            }
+        </style>
+        
+        <script>
+        function searchbar() {
+            var x = document.forms["myForm"]["search_input"].value;
+            if (x == "") {
+                alert("검색어를 입력해 주세요");
+                return false;
             }
         }
+        </script>
+        
+        <title>J의 지식창고</title>
+    </head>
 
-        @media screen and (max-width: 400px) {
-            .topnav a {
-                float: none;
-                width: 100%;
-            }
-        }
-    </style>
-    <title>J의 지식창고</title>
-</head>
+    <body>
 
-<body>
-
-    <div class="header">
-        <h1>J의 지식창고</h1>
-        <p>사이트 요약 설명 글</p>
-    </div>
-
-    <div class="topnav">
-        <a href="#">menu1</a>
-        <a href="#">menu2</a>
-        <a href="#">menu3</a>
-        <a href="#" style="float: left;">Home</a>
-    </div>
-
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="post">
-                <h2>포스트 제목</h2>
-                <h5>작성 시간 or 소제목</h5>
-                <div class="noimage" style="height:200px;">미리보기 이미지</div>
-                <p>글 내용</p>
-            </div>
-            <div class="post">
-                <h2>포스트 제목</h2>
-                <h5>작성 시간 or 소제목</h5>
-                <div class="noimage" style="height:200px;">미리보기 이미지</div>
-                <p>글 내용</p>
-            </div>
+        <div class="header">
+            <h1>J의 지식창고</h1>
+            <p>사이트 요약 설명 글</p>
         </div>
-        <div class="rightcolumn">
-            <div class="post">
-                <h2>Search</h2>
-                <p>검색바 만들기</p>
-            </div>
-            <div class="post">
-                <h3>Categories</h3>
-                <CENTER>
-                    <a href="#">Category1</a><p>
-                    <a href="#">Category2</a><p>
-                    <a href="#">Category3</a>
-                </CENTER>
+
+        <div class="topnav">
+            <a href="#">menu1</a>
+            <a href="#">menu2</a>
+            <a href="#">menu3</a>
+            <a href="#" style="float: left;">Home</a>
+        </div>
+        
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="post">
+                    <h2 class="post-title">포스트 제목</h2>
+                    <p>글 내용</p>
+                    <button class="button" onclick="location.href='#'"><span>자세히 보기</span></button>
+                    <h5 class="post-footer">작성 시간 or 소제목</h5>
+                </div>
+                <div class="post">
+                    <h2 class="post-title">포스트 제목</h2>
+                    <p>글 내용</p>
+                    <button class="button" onclick="location.href='#'"><span>자세히 보기</span></button>
+                    <h5 class="post-footer">작성 시간 or 소제목</h5>
+                </div>
+                <div class="post">
+                    <h2 class="post-title">포스트 제목</h2>
+                    <p>글 내용</p>
+                    <button class="button" onclick="location.href='#'"><span>자세히 보기</span></button>
+                    <h5 class="post-footer">작성 시간 or 소제목</h5>
                 </div>
             </div>
+            <div class="rightcolumn">
+                <div class="sidebar">
+                    <h3 class="sidebar-title">Search</h3>
+                    <form name="search" onsubmit="return searchbar()" method="post">
+                    <input type="text" name="search_input">
+                    <input type="submit" value="검색">
+                    </form>
+                </div>
+                <div class="sidebar">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <CENTER>
+                        <a href="#">Category1</a><p>
+                        <a href="#">Category2</a><p>
+                        <a href="#">Category3</a>
+                    </CENTER>
+                </div>
+            </div>
+            <form method=get action="http://www.google.co.kr/search" target="_blank" >   
+                <table bgcolor="#FFFFFF" class="google">     
+                    <tr>       
+                        <td>           
+                            <input type=text name=gs size=20 value="" /> <!-- 구글 검색 입력 창 -->           
+                            <input type=submit name=gsbut value="Google 검색" /> <!-- 검색 버튼 -->       
+                        </td>     
+                    </tr>   
+                </table> 
+            </form>
         </div>
-    </div>
+        <div class="below">
+            <h2>정보</h2>
+        </div>
 
-    <div class="below">
-        <h2>정보</h2>
-    </div>
-
-</body>
+    </body>
 
 </html>
