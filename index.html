@@ -2,7 +2,6 @@
 <html>
 
     <head>
-        <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
         <style>
             * {
                 box-sizing: border-box;
@@ -189,7 +188,7 @@
         
         <script>
         function searchbar() {
-            var x = document.forms["myForm"]["search_input"].value;
+            var x = document.forms["search"]["search_input"].value;
             if (x == "") {
                 alert("검색어를 입력해 주세요");
                 return false;
