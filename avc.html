@@ -6,18 +6,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script> 
         $(document).ready(function(){
-            $("#flip1").click(function(){
-                $("#panel1").slideToggle("slow");
-            });
-        });
-        $(document).ready(function(){
-            $("#flip2").click(function(){
-                $("#panel2").slideToggle("slow");
-            });
-        });
-        $(document).ready(function(){
-            $("#flip3").click(function(){
-                $("#panel3").slideToggle("slow");
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
             });
         });
         </script>
@@ -108,12 +98,12 @@
             
             .leftcolumn {
                 float: left;
-                width: 80%;
+                width: 100%;
             }
 
             .rightcolumn {
                 float: left;
-                width: 20%;
+                width: 0%;
                 background-color: #fff;
                 padding-left: 20px;
             }
@@ -244,7 +234,7 @@
                 margin-top: 20px;
             }
             
-            #panel1, #flip1, #panel2, #flip2 ,#panel3, #flip3 {
+            #panel, #flip {
                 padding: 10px;
                 border-radius: 4px;
                 text-align: center;
@@ -253,14 +243,14 @@
                 border-radius: 4px;
                 font-size: 18px;
             }
-            #flip1, #flip2, #flip3 {
+            #flip {
                 color: #eac486;
                 width: 150px;
                 margin-bottom: 0px;
                 margin-left: 0px;
                 margin-right: 0px;
             }
-            #panel1, #panel2 , #panel3 {
+            #panel {
                 display: none;
             }
         </style>
@@ -285,7 +275,7 @@
         </div>
 
         <div class="topnav">
-            <a href="#">Home</a>
+            <a href="home.html">Home</a>
             <div class="search-container">
                 <form name="search" onsubmit="return searchbar()" method="post">
                     <input type="text" placeholder="Search.." name="search_input">
@@ -298,41 +288,8 @@
         <div class="row">
             <div class="leftcolumn">
                 <div class="post">
-                    <img src="avc.JPG" width="100%" height="100%">
-                    <p>득점 : 53' 레비치, 80' 모드리치, 90+3' 라키티치 (크로아티아)</p>
-                    <div id="flip1">하이라이트</div>
-                    <div id="panel1"><iframe width="80%" height="400" src="https://www.youtube-nocookie.com/embed/AAEI49JkZgA?start=35" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    <p></p>
-                    <button class="button" onclick="location.href='avc.html'"><span>상세정보</span></button>
-                    <h5 class="post-footer">6월 22일 3:00(한국시간) <a href="https://namu.wiki/w/%EB%8B%88%EC%A6%88%EB%8B%88%20%EB%85%B8%EB%B8%8C%EA%B3%A0%EB%A1%9C%EB%93%9C%20%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80">니즈니 노브고로드 스타디움</a></h5>
-                </div>
-                <div class="post">
-                    <img src="fvp.JPG" width="100%" height="100%">
-                    <p>득점 : 34' 음바페 (프랑스)</p>
-                    <div id="flip2">하이라이트</div>
-                    <div id="panel2"><iframe width="80%" height="400" src="https://www.youtube-nocookie.com/embed/OafF6meEQBs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    <p></p>
-                    <button class="button" onclick="location.href='fvp.html'"><span>상세정보</span></button>
-                    <h5 class="post-footer">6월 22일 0:00(한국시간) <a href="https://namu.wiki/w/%EC%98%88%EC%B9%B4%ED%85%8C%EB%A6%B0%EB%B6%80%EB%A5%B4%ED%81%AC%20%EC%95%84%EB%A0%88%EB%82%98">예카테린부르크 아레나</a></h5>
-                </div>
-                <div class="post">
-                    <img src="dva.JPG" width="100%" height="100%">
-                    <p>득점 : 7' 에릭센 (덴마크) || 38' 예디낙 (호주)</p>
-                    <div id="flip3">하이라이트</div>
-                    <div id="panel3"><iframe width="80%" height="400" src="https://www.youtube-nocookie.com/embed/MSbCCF7wqOs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    <p></p>
-                    <button class="button" onclick="location.href='dva.html'"><span>상세정보</span></button>
-                    <h5 class="post-footer">6월 21일 21:00(한국시간) <a href="https://namu.wiki/w/%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4%20%EC%95%84%EB%A0%88%EB%82%98">사마라 아레나(코스모스 아레나)</a></h5>
-                </div>
-            </div>
-            <div class="rightcolumn">
-                <div class="sidebar">
-                    <h3 class="sidebar-title">관련사이트</h3>
-                    <CENTER>
-                        <a href="https://www.fifa.com/worldcup/">FIFA</a><p>
-                        <a href="https://sports.news.naver.com/wfootball/index.nhn">네이버스포츠</a><p>
-                        <a href="https://www.whoscored.com/">Whoscored</a>
-                    </CENTER>
+                    <iframe height="1000px" width="100%" frameborder="0" src="https://sports.news.naver.com/russia2018/gameCenter/index.nhn?gameId=2018062213245880"></iframe>
+                    <h5 class="post-footer">출처: <a href="https://sports.news.naver.com/russia2018/gameCenter/index.nhn?gameId=2018062213245880">네이버 스포츠</a></h5>
                 </div>
             </div>
         </div>
